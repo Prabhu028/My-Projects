@@ -4,20 +4,20 @@ This repository contains a DevSecOps project (Netflix-clone) developed using Nod
 
 Prerequisites
 
-* Install Docker 
-   Run following commands
+* Install Docker: 
+  Run following commands
    (curl -fsSL https://get.docker.com -o install-docker.sh && sudo sh install-docker.sh).
 
-* Authenticate azure cli 
-   Run following commands
+* Authenticate azure cli: 
+  Run following commands
    (az login) 'The command will open a browser window prompting you to log in to your Azure account. Enter your credentials and complete the authentication process'.
 
-* Kubectl for orchestration
-   Run following command 
+* Kubectl for orchestration:
+  Run following command 
    (sudo apt-get update && sudo apt-get install -y kubectl).
 
-* Trivy for vulnerability scanning
-   Run following command
+* Trivy for vulnerability scanning:
+  Run following command
    (sudo apt-get install wget apt-transport-https gnupg lsb-release
     wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
     echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
