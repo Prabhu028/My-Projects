@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build docker image') {
             steps {
-                sh "docker image build -t prabhusairam/netflix:$BUILD_ID ."
+                sh "docker image build -t prabhusairam/netflix:v1 ."
             }
         }
         // stage('Trivy Scan') {
@@ -22,7 +22,7 @@ pipeline {
         // }
         stage('publish docker image') {
             steps {
-                sh "docker push prabhusairam/netflix:$BUILD_ID"
+                sh "docker push prabhusairam/netflix:v1"
             }
         }
         // stage('Ensure kubernetes cluster is up') {
