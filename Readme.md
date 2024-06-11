@@ -1,8 +1,18 @@
-Overview
+#  Netflix Clone DevSecOps Project
 
-This repository contains a DevSecOps project (Netflix-clone) developed using Node.js and React.js for the frontend, TypeScript for type safety, and various tools such as Trivy, Docker, Terraform, Kubernetes (K8s), and Jenkins for implementing DevSecOps practices.
+## Overview
+This repository contains a DevSecOps project that replicates the functionality of Netflix using modern web development technologies and best practices. The frontend is developed using Node.js and React.js, with TypeScript ensuring type safety. The project integrates various DevSecOps tools such as Trivy, Docker, Terraform, Kubernetes (K8s), and Jenkins to implement comprehensive CICD pipeline.
 
-Prerequisites:
+## DevSecOps Tools
+
+- Jenkins: Automation server for CI/CD pipelines
+- Terraform: Infrastructure as Code (IaC) for provisioning cloud resources
+- Docker: Containerization for consistent development and deployment environments
+- Trivy: Security scanning for vulnerabilities in container images
+- Kubernetes: Orchestration for automated deployment, scaling, and management of containerized applications
+
+
+## Prerequisites:
 
 * Install Jenkins:
   Run following commands
@@ -34,5 +44,14 @@ Prerequisites:
     sudo apt-get update
     sudo apt-get install trivy).
 
+## workflow
+
+The workflow for this project includes:
+
+- Seting up Jenkins for CI/CD automation. 
+- Building the Docker image.
+- Pushing the Docker image to a container registry.
+- Applying Terraform scripts.
+- Deploying the application to AKS cluster.
 
  
