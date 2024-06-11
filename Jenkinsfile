@@ -22,7 +22,7 @@ pipeline {
         }
         stage('publish docker image') {
             steps {
-                sh "docker image push prabhusairam/netflix:$BUILD_ID"
+                sh "docker push prabhusairam/netflix:$BUILD_ID"
             }
         }
         // stage('Ensure kubernetes cluster is up') {
