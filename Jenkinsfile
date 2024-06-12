@@ -12,14 +12,14 @@ pipeline {
                 sh "docker image build -t prabhusairam/netflix:v1 ."
             }
         }
-        // stage('Trivy Scan') {
-        //     steps {
-        //         script {
-        //             sh "trivy image --format json -o trivy-report.json prabhusairam/netflix:$BUILD_ID"
-        //         }
-        //         publishHTML([reportName: 'Trivy Vulnerability Report', reportDir: '.', reportFiles: 'trivy-report.json', keepAll: true, alwaysLinkToLastBuild: true, allowMissing: false])
-        //     }
-        // }
+        stage('Trivy Scan') {
+            steps {
+                script {
+                    sh "trivy image --format json -o trivy-report.json prabhusairam/netflix:$BUILD_ID"
+                }
+                publishHTML([reportName: 'Trivy Vulnerability Report', reportDir: '.', reportFiles: 'trivy-report.json', keepAll: true, alwaysLinkToLastBuild: true, allowMissing: false])
+            }
+        }
         stage('publish docker image') {
             steps {
                 sh "docker push prabhusairam/netflix:v1"
