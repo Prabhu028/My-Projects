@@ -57,3 +57,10 @@ Architecture
 - This project integrates security at multiple stages:
   1.Docker images are scanned with Trivy to identify vulnerabilities.
   2.The Kubernetes cluster is scanned with Kubescape to ensure security compliance.
+
+
+![Alt text](<Screenshot 2024-06-12 234138.png>)
+![Alt text](<Screenshot 2024-06-12 232704-1.png>) 
+![Alt text](<Screenshot 2024-06-12 232824-1.png>) 
+![Alt text](<Screenshot 2024-06-12 232951-1.png>) 
+![Alt text](<Screenshot 2024-06-12 233322-1.png>)
