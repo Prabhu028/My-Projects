@@ -1,12 +1,7 @@
-resource "azurerm_resource_group" "example" {
-  name     = "example-resources"
-  location = "East US"
-}
-
-resource "azurerm_kubernetes_cluster" "example" {
-  name                = "example-aks1"
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
+resource "azurerm_kubernetes_cluster" "main" {
+  name                = "aks-1"
+  location            = var.location
+  resource_group_name = azurerm_resource_group.main.name
   dns_prefix          = "exampleaks1"
 
   default_node_pool {
@@ -24,18 +19,12 @@ resource "azurerm_kubernetes_cluster" "example" {
   }
 }
 
-output "client_certificate" {
-  value = azurerm_kubernetes_cluster.example.kube_config.0.client_certificate
-  sensitive = true
-}
-
-
 resource "null_resource" "get_kube_config" {
   triggers = {
-    cluster_id = azurerm_kubernetes_cluster.example.id
+    cluster_id = azurerm_kubernetes_cluster.main.id
   }
 
   provisioner "local-exec" {
-    command = "az aks get-credentials --resource-group ${azurerm_resource_group.example.name} --name ${azurerm_kubernetes_cluster.example.name} --overwrite-existing"
+    command = "az aks get-credentials --resource-group ${azurerm_resource_group.main.name} --name ${azurerm_kubernetes_cluster.main.name} --overwrite-existing"
   }
 }
