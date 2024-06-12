@@ -12,7 +12,7 @@ pipeline {
                 sh "docker image build -t prabhusairam/netflix:v1 ."
             }
         }
-        stage('Trivy Scan') {
+        stage('Trivy Scan')  {
             steps {
                 script {
                     sh "trivy image --format json -o trivy-report.json prabhusairam/netflix:$BUILD_ID"
