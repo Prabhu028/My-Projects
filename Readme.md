@@ -1,16 +1,36 @@
 #  Netflix Clone DevSecOps Project
 
-## Overview
-This repository contains a DevSecOps project that replicates the functionality of Netflix using modern web development technologies and best practices. The frontend is developed using Node.js and React.js, with TypeScript ensuring type safety. The project integrates various DevSecOps tools such as Trivy, Docker, Terraform, Kubernetes (K8s), and Jenkins to implement comprehensive CICD pipeline.
+## Table of Contents
 
-## DevSecOps Tools
+- Introduction
+- Features
+- Architecture
+- Prerequisites
+- Setup Instructions
+- Security
 
-- Jenkins: Automation server for CI/CD pipelines
-- Terraform: Infrastructure as Code (IaC) for provisioning cloud resources
-- Docker: Containerization for consistent development and deployment environments
-- Trivy: Security scanning for vulnerabilities in container images
-- Kubernetes: Orchestration for automated deployment, scaling, and management of containerized applications
 
+
+## Introduction
+
+This project is a Netflix Clone application designed to demonstrate a complete DevSecOps pipeline. It is containerized with Docker, automated with Jenkins, and uses several tools to ensure security and scalability:
+
+1.Docker for containerization.
+2.Trivy for Docker image scanning.
+3.Terraform for infrastructure as code (provisioning an AKS cluster).
+4.Kubernetes for deploying and managing the application.
+5.Kubescape for Kubernetes security scanning.
+
+## Features
+
+Netflix-like UI for streaming media content.
+Automated CI/CD pipeline with Jenkins.
+Containerized using Docker for consistency across environments.
+Security scanning of Docker images with Trivy.
+Infrastructure managed with Terraform.
+Deployment on Azure Kubernetes Service (AKS).
+Kubernetes cluster security scanning with Kubescape.
+Architecture
 
 ## Prerequisites:
 
@@ -34,14 +54,8 @@ This repository contains a DevSecOps project that replicates the functionality o
   install from this:
   https://aquasecurity.github.io/trivy/v0.18.3/installation/
 
-## workflow
+## Security
 
-The workflow for this project includes:
-
-- Seting up Jenkins for CI/CD automation. 
-- Building the Docker image.
-- Pushing the Docker image to a container registry.
-- Applying Terraform scripts.
-- Deploying the application to AKS cluster.
-
- 
+- This project integrates security at multiple stages:
+  Docker images are scanned with Trivy to identify vulnerabilities.
+  The Kubernetes cluster is scanned with Kubescape to ensure security compliance.
