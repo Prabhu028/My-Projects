@@ -15,7 +15,7 @@ pipeline {
         stage('Trivy Scan')  {
             steps {
                 script {
-                    sh "trivy image --format json -o trivy-report.json prabhusairam/netflix:$BUILD_ID"
+                    sh "trivy image --format json -o trivy-report.json prabhusairam/netflix:v1"
                 }
                 publishHTML([reportName: 'Trivy Vulnerability Report', reportDir: '.', reportFiles: 'trivy-report.json', keepAll: true, alwaysLinkToLastBuild: true, allowMissing: false])
             }
