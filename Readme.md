@@ -11,24 +11,23 @@
 
 ## Introduction
 
-This project is a Netflix Clone application designed to demonstrate a complete DevSecOps pipeline. It is containerized with Docker, automated with Jenkins, and uses several tools like Trivy and Kubescape to ensure security and scalability:
-
-1.Docker for containerization.
-2.Trivy for Docker image scanning.
-3.Terraform for infrastructure as code (provisioning an AKS cluster).
-4.Kubernetes for deploying and managing the application.
-5.Kubescape for Kubernetes security scanning.
+This project is a Netflix Clone application designed to demonstrate a complete DevSecOps pipeline. 
+It is containerized with Docker, automated with Jenkins, and uses several tools like Trivy and Kubescape to ensure security and scalability:
+- 1.Docker for containerization.
+- 2.Trivy for Docker image scanning.
+- 3.Terraform for infrastructure as code (provisioning an AKS cluster).
+- 4.Kubernetes for deploying and managing the application.
+- 5.Kubescape for Kubernetes security scanning.
 
 ## Features
 
-Netflix-like UI for streaming media content.
-Automated CI/CD pipeline with Jenkins.
-Containerized using Docker for consistency across environments.
-Security scanning of Docker images with Trivy.
-Infrastructure managed with Terraform.
-Deployment on Azure Kubernetes Service (AKS).
-Kubernetes cluster security scanning with Kubescape.
-Architecture
+- Netflix-like UI for streaming media content.
+- Automated CI/CD pipeline with Jenkins.
+- Containerized using Docker for consistency across environments.
+- Security scanning of Docker images with Trivy.
+- Infrastructure managed with Terraform.
+- Deployment on Azure Kubernetes Service (AKS).
+- Kubernetes cluster security scanning with Kubescape.
 
 ## Prerequisites:
 
@@ -86,7 +85,7 @@ Architecture
 - Ensures compliance with Kubernetes security best practices and policies.
 
 # Accessing the Application
-Once deployed, the application can be accessed via the AKS LoadBalancer IP address.
+- Once deployed, the application can be accessed via the AKS LoadBalancer IP address. <'http://loadbalancer-ip'>
 
 
 
