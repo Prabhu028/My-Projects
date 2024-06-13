@@ -1,6 +1,6 @@
 #  Netflix Clone DevSecOps Project
 
-## Table of Contents
+# Table of Contents
 
 - Introduction
 - Features
@@ -9,7 +9,7 @@
 
 
 
-## Introduction
+# Introduction
 
 This project is a Netflix Clone application designed to demonstrate a complete DevSecOps pipeline. 
 It is containerized with Docker, automated with Jenkins, and uses several tools like Trivy and Kubescape to ensure security and scalability:
@@ -19,7 +19,7 @@ It is containerized with Docker, automated with Jenkins, and uses several tools 
  - Kubernetes for deploying and managing the application.
  - Kubescape for Kubernetes security scanning.
 
-## Features
+# Features
 
 - Netflix-like UI for streaming media content.
 - Automated CI/CD pipeline with Jenkins.
@@ -29,7 +29,7 @@ It is containerized with Docker, automated with Jenkins, and uses several tools 
 - Deployment on Azure Kubernetes Service (AKS).
 - Kubernetes cluster security scanning with Kubescape.
 
-## Prerequisites:
+# Prerequisites:
 
 * Install Jenkins from:
   https://www.jenkins.io/doc/book/installing/linux/
@@ -52,42 +52,41 @@ It is containerized with Docker, automated with Jenkins, and uses several tools 
   https://aquasecurity.github.io/trivy/v0.18.3/installation/
 
 
-## Pipeline Workflow
+# Pipeline Workflow
 
-# Source Code Management
+## Source Code Management
 - GitHub: Utilizes GitHub for managing the application’s source code. 
 - Code changes are tracked and versioned through GitHub repositories.
 
-# Continuous Integration/Continuous Deployment (CI/CD) with Jenkins
+## Continuous Integration/Continuous Deployment (CI/CD) with Jenkins
 - Jenkins Pipeline: Automates the build, test, and deployment processes using a Jenkins pipeline. 
 - The pipeline is triggered by code commits to the repository via Webhooks.
 
-# Build Step
+## Build Step
 - Docker: Builds Docker images from the application’s source code.
 - Docker Hub: Pushes the built images to Docker Hub, a Docker registry for storing and managing Docker images.
 
-# Test
+## Test
 - Image Scanning with Trivy:
  Integrates Trivy into the Jenkins pipeline to scan Docker images for vulnerabilities before proceeding to deployment.
 
-# Infrastructure Provisioning with Terraform
+## Infrastructure Provisioning with Terraform
 - Terraform Scripts:
 - Develops and manages an AKS (Azure Kubernetes Service) cluster using Terraform scripts.
 - Stores these scripts in version control for consistency and collaboration.
 
-# Application Deployment with Kubernetes
+## Application Deployment with Kubernetes
 - Kubernetes Manifests:
 - Uses Kubernetes manifests to deploy the application to the AKS cluster.
 - Manages application scaling, updates, and rollback using Kubernetes features.
 
-# Security Scanning with Kubescape:
+## Security Scanning with Kubescape:
 - Integrates Kubescape into the pipeline to perform security scans on the Kubernetes cluster.
 - Ensures compliance with Kubernetes security best practices and policies.
 
-# Accessing the Application
+## Accessing the Application
 - Once deployed, the application can be accessed via the AKS LoadBalancer IP address. 
-
- <'http://loadbalancer-ip'> 
+<'http://loadbalancer-ip'> 
 
 
 
