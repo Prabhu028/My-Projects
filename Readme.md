@@ -12,7 +12,7 @@
 # Introduction
 
 This project is a Netflix Clone application designed to demonstrate a complete DevSecOps pipeline. 
-Automated with Jenkins and uses to ensure security and scalability:
+Automated with Jenkins and uses tools to ensure security and scalability:
 
  - Docker for containerization.
  - Trivy for Docker image scanning.
