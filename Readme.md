@@ -13,11 +13,11 @@
 
 This project is a Netflix Clone application designed to demonstrate a complete DevSecOps pipeline. 
 It is containerized with Docker, automated with Jenkins, and uses several tools like Trivy and Kubescape to ensure security and scalability:
- 1.Docker for containerization.
- 2.Trivy for Docker image scanning.
- 3.Terraform for infrastructure as code (provisioning an AKS cluster).
- 4.Kubernetes for deploying and managing the application.
- 5.Kubescape for Kubernetes security scanning.
+ - Docker for containerization.
+ - Trivy for Docker image scanning.
+ - Terraform for infrastructure as code (provisioning an AKS cluster).
+ - Kubernetes for deploying and managing the application.
+ - Kubescape for Kubernetes security scanning.
 
 ## Features
 
@@ -86,7 +86,8 @@ It is containerized with Docker, automated with Jenkins, and uses several tools 
 
 # Accessing the Application
 - Once deployed, the application can be accessed via the AKS LoadBalancer IP address. 
-- <'http://loadbalancer-ip'>
+
+ <'http://loadbalancer-ip'> 
 
 
 
