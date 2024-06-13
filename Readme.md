@@ -11,7 +11,7 @@
 
 ## Introduction
 
-This project is a Netflix Clone application designed to demonstrate a complete DevSecOps pipeline. It is containerized with Docker, automated with Jenkins, and uses several tools to ensure security and scalability:
+This project is a Netflix Clone application designed to demonstrate a complete DevSecOps pipeline. It is containerized with Docker, automated with Jenkins, and uses several tools like Trivy and Kubescape to ensure security and scalability:
 
 1.Docker for containerization.
 2.Trivy for Docker image scanning.
@@ -52,11 +52,44 @@ Architecture
   install from this:
   https://aquasecurity.github.io/trivy/v0.18.3/installation/
 
-## Security
 
-- This project integrates security at multiple stages:
-  1.Docker images are scanned with Trivy to identify vulnerabilities.
-  2.The Kubernetes cluster is scanned with Kubescape to ensure security compliance.
+## Pipeline Workflow
+
+# Source Code Management
+- GitHub: Utilizes GitHub for managing the application’s source code. 
+- Code changes are tracked and versioned through GitHub repositories.
+
+# Continuous Integration/Continuous Deployment (CI/CD) with Jenkins
+- Jenkins Pipeline: Automates the build, test, and deployment processes using a Jenkins pipeline. 
+- The pipeline is triggered by code commits to the repository via Webhooks.
+
+# Build Step
+- Docker: Builds Docker images from the application’s source code.
+- Docker Hub: Pushes the built images to Docker Hub, a Docker registry for storing and managing Docker images.
+
+# Test
+- Image Scanning with Trivy:
+ Integrates Trivy into the Jenkins pipeline to scan Docker images for vulnerabilities before proceeding to deployment.
+
+# Infrastructure Provisioning with Terraform
+- Terraform Scripts:
+- Develops and manages an AKS (Azure Kubernetes Service) cluster using Terraform scripts.
+- Stores these scripts in version control for consistency and collaboration.
+
+# Application Deployment with Kubernetes
+- Kubernetes Manifests:
+- Uses Kubernetes manifests to deploy the application to the AKS cluster.
+- Manages application scaling, updates, and rollback using Kubernetes features.
+
+# Security Scanning with Kubescape:
+- Integrates Kubescape into the pipeline to perform security scans on the Kubernetes cluster.
+- Ensures compliance with Kubernetes security best practices and policies.
+
+# Accessing the Application
+Once deployed, the application can be accessed via the AKS LoadBalancer IP address.
+
+
+
 
 
 ![Alt text](<Screenshot 2024-06-12 234138.png>)
